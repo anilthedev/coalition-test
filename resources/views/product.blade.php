@@ -21,12 +21,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-               {{-- <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>--}}
+
             </ul>
         </nav>
         <h3 class="text-muted">Project name</h3>
@@ -36,9 +31,28 @@
         <h1 class="display-3">Add Your Product</h1>
         <div class="container">
             <div class="row">
+
                 <div class="col">
-                    1 of 2
+                    {!! Form::open(['method'=>'post','id'=>'addProductForm']) !!}
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        {!! Form::text('product_name','',['class'=>'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        {!! Form::number('quantity','',['class'=>'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        {!! Form::number('price','',['class'=>'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                        {!! Form::submit('Save',['class'=>'btn btn-primary']) !!}
+                    </div>
+
+                    {!! Form::close() !!}
                 </div>
+
 
             </div>
 
