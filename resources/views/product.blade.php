@@ -8,8 +8,9 @@
     <title>Sample Bootstrap Page</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+    <script type="text/javascript">var baseUrl = "<?php echo URL::to('/'); ?>";</script>
 </head>
 
 <body>
@@ -59,9 +60,16 @@
         </div>
 
     </div>
+    <div class="container productsContainer">
+        <div class="row">
+            <div class="col">
+            <div class="productsList"></div>
+            </div>
+        </div>
+    </div>
 
 
-
+    <script src="{{url('/')}}/js/custom.js"></script>
     <footer class="footer">
         <p>&copy; Company 2017</p>
     </footer>

@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('product');
 });
+
+Route::post('/product/add-product', 'ProductsController@add');
+Route::get('/product/get-all-products', 'ProductsController@listProducts');
+
